@@ -1,17 +1,19 @@
-"use strict";
+'use strict'
 
 const findBestEmployee = function (employees) {
     let bestEmployee;
     let currentEmployee = 0;
 
-    for (const key in employees) {
+    const employeeArray = Object.keys(employees);
+
+    for (const key of employeeArray) {
         if (employees[key] > currentEmployee) {
             bestEmployee = key;
             currentEmployee = employees[key];
         };
     }
     return bestEmployee;
-}
+};
 
 console.log(
     findBestEmployee({
@@ -19,7 +21,7 @@ console.log(
         david: 35,
         helen: 1,
         lorence: 99,
-    })
+    }),
 );
 
 console.log(
@@ -27,7 +29,7 @@ console.log(
         poly: 12,
         mango: 17,
         ajax: 4,
-    })
+    }),
 );
 
 console.log(
@@ -36,5 +38,5 @@ console.log(
         david: 21,
         kiwi: 19,
         chelsy: 38,
-    })
+    }),
 );
